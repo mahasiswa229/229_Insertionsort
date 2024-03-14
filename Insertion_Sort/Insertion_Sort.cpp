@@ -24,7 +24,7 @@ void input() {
         cin >> arr[i];
     }
 }
-void InsrtionSort() {
+void insertionSort() {
     for (i = 1; i <= n - 1; i++) { //step 1
         temp = arr[i]; //step 2
 
@@ -53,7 +53,7 @@ void InsrtionSort() {
 
 int main() {
     input();
-    InsrtionSort();
+    insertionSort();
     display();
 
     system("pause");
