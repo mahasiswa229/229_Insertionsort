@@ -10,11 +10,17 @@ void insertionsort()
        //step1 
         temp = arr[i]; //step2
 
-        while (j >= 0 && arr[j] >= temp)//step4
+        j = i - 1;//step3
+
+        while (j >= 0 && arr[j] > temp)//step4
         {
             arr[j + 1] = arr[j];//step4a
             j = -1;//step4b
         }
+        
+        arr[j + 1] = temp;//step5
+
+        
     }
 }
 
