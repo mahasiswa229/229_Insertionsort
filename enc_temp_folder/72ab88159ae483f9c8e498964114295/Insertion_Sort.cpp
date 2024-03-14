@@ -1,9 +1,13 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int i, j, n, temp;
 int arr[20];
-void input() {
+
+
+
+void input() 
+{
     while (true)
     {
         cout << "masukan banyaknya elemen array : ";
@@ -18,28 +22,39 @@ void input() {
     cout << "====================" << endl;
     cout << "masukan elemen array" << endl;
     cout << "====================" << endl;
+
     for (int i = 0; i < n; i++)
     {
         cout << "data ke-" << (i + 1) << ": ";
         cin >> arr[i];
     }
+
 }
-void InsrtionSort() {
-    for (i = 1; i <= n - 1; i++) { //step 1
-        temp = arr[i]; //step 2
 
-        j = i - 1; //step 3
 
-        while (j >= 0 && arr[j] > temp) //step 4
+void insertionsort() 
+{
+    for(i= 1; i <= n-1; i++)
+    {
+       //step1 
+        temp = arr[i]; //step2
+
+        j = i - 1;//step3
+
+        while (j >= 0 && arr[j] > temp)//step4
         {
-            arr[j + 1] = arr[j]; //step 4a
-            j--; //step 4b
+            arr[j + 1] = arr[j];//step4a
+            j = -1;//step4b
         }
+        
+        arr[j + 1] = temp;//step5
 
-        arr[j + 1] = temp; //step 5
+        
     }
+}
 
-} void display() {
+void display()
+{
     cout << endl;
     cout << "=================================" << endl;
     cout << "Element Array yang telah tersusun" << endl;
@@ -51,11 +66,11 @@ void InsrtionSort() {
     cout << endl;
 }
 
-int main() {
+int main()
+{
     input();
-    InsrtionSort();
+    insertionsort();
     display();
-
-    system("pause");
+    system("Pause");
     return 0;
 }
